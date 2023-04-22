@@ -16,7 +16,7 @@ app.use(cors({origin: "*"}));
 
 require("./config/db.js");
 
-const router = require("./routes/Router.js");
+const router = require("./api/routes/Router.js");
 app.use(router);
 
 app.get("/", (req, res) => {
