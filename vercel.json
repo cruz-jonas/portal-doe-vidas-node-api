@@ -1,0 +1,14 @@
+{
+    "version": 2,
+    "build": [
+        {
+            "src": "backend/index.js"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "backend/index.js"
+        }
+    ]
+}
