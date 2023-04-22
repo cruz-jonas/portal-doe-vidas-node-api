@@ -20,7 +20,7 @@ const router = require("./routes/Router.js");
 app.use(router);
 
 app.get("/", (req, res) => {
-    return res.json("Teste api OK")
+    return res.json(path.join(__dirname+'/public/index.html'))
 })
 
 app.listen(port, () => {
