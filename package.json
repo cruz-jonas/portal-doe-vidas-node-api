@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon ./api/index.js"
+    "server": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
