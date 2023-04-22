@@ -14,9 +14,9 @@ app.use(express.urlencoded({ extended: false}));
 // resolvendo cors (trocar url para url onde estará deployado)
 app.use(cors({origin: "*"}));
 
-require("./config/db.js");
+require("../config/db.js");
 
-const router = require("./api/routes/Router.js");
+const router = require("./routes/Router.js");
 app.use(router);
 
 app.get("/", (req, res) => {
