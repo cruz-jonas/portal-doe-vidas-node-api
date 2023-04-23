@@ -2,6 +2,7 @@ const { validationResult } = require("express-validator")
 
 const validate = (req, res, next) => {
 
+    console.log("Acessou o Middleware")
     const errors = validationResult(req)
 
     if(errors.isEmpty()) {
