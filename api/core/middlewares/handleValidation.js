@@ -2,9 +2,6 @@ const { validationResult } = require("express-validator")
 
 const validate = (req, res, next) => {
 
-    req.setHeader('Access-Control-Allow-Origin', "*")
-    req.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-
     const errors = validationResult(req)
 
     if(errors.isEmpty()) {

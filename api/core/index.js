@@ -13,9 +13,9 @@ app.use(express.urlencoded({ extended: false}));
 
 app.use(cors());
 
-require("./config/db.js");
+require("config/db.js");
 
-const router = require("./routes/Router.js");
+const router = require("routes/Router.js");
 app.use(router);
 
 app.get("/", (req, res) => {
