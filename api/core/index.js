@@ -12,14 +12,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false}));
 
 app.use((req, res, next) => {
-    console.log("Acessou Middleware!")
+    res.header("Access-Control-Allow-Origin", "*")
+    app.use(cors())
+    next()
 })
 
-app.use(cors());
+require("./config/db.js");
 
-require("config/db.js");
-
-const router = require("routes/Router.js");
+const router = require("./routes/Router.js");
 app.use(router);
 
 app.get("/", (req, res) => {
