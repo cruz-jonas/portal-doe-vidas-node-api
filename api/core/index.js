@@ -26,6 +26,18 @@ app.get("/", (req, res) => {
     return res.json("Teste api OK")
 })
 
+app.get("/teste", (req, res) => {
+    const data = [
+        {
+            "teste":"teste"
+        },
+        {
+            "teste":"teste"
+        }
+    ]
+    return res.json(data)
+})
+
 app.listen(port, () => {
     console.log(`App rodando na porta ${port}`)
 })
